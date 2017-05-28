@@ -1,0 +1,66 @@
+{
+	"name":"cbj-special",
+
+	"variables" :
+		[
+			{
+				"name" : "X1",
+				"domain" : ["b", "h"]
+			},
+
+			{
+				"name" : "X2",
+				"domain" : ["g"]
+			},
+
+			{
+				"name" : "X3",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X4",
+				"domain" : ["h"]
+			},
+
+			{
+				"name" : "X5",
+				"domain" : ["r"]
+			}			
+		],
+
+	"constraints" :
+		[
+			{
+				"scope" : ["X1", "X2"],
+				"relation" : [["b", "g"], ["h", "g"]]
+			},
+
+			{
+				"scope" : ["X1", "X3"],
+				"relation" : [["b", "r"], ["h", "r"], ["h", "b"]]
+			},
+
+			{
+				"scope" : ["X2", "X3"],
+				"relation" : [["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X2", "X4"],
+				"relation" : [["g", "h"]]
+			},
+
+			{
+				"scope" : ["X3", "X5"],
+				"relation" : [["b", "r"]]
+			},
+
+			{
+				"scope" : ["X4", "X5"],
+				"relation" : [["h", "r"]]
+			}
+		],
+
+	"ordering" : ["X1", "X2", "X3", "X4", "X5"]
+}

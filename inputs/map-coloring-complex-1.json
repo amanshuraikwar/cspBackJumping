@@ -1,0 +1,36 @@
+{
+	"name":"complex-1",
+
+	"variables" :
+		[
+			{
+				"name" : "X1",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X2",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X3",
+				"domain" : ["r"]
+			}
+		],
+
+	"constraints" :
+		[
+			{
+				"scope" : ["X1", "X3"],
+				"relation" : [["b", "r"]]
+			},
+
+			{
+				"scope" : ["X2", "X3"],
+				"relation" : [["b", "r"]]
+			}
+		],
+
+	"ordering" : ["X1", "X2", "X3"]
+}

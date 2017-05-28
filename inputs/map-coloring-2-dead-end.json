@@ -1,0 +1,41 @@
+{
+	"name":"2-dead-end",
+
+	"variables" :
+		[
+			{
+				"name" : "X1",
+				"domain" : ["r", "g"]
+			},
+
+			{
+				"name" : "X2",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X3",
+				"domain" : ["r", "b"]
+			}
+		],
+
+	"constraints" :
+		[
+			{
+				"scope" : ["X1", "X2"],
+				"relation" : [["r", "b"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X1", "X3"],
+				"relation" : [["r", "b"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X2", "X3"],
+				"relation" : [["r", "b"], ["b", "r"]]
+			}
+		],
+
+	"ordering" : ["X1", "X2", "X3"]
+}

@@ -1,0 +1,81 @@
+{
+	"name":"gbj-test",
+
+	"variables" :
+		[
+			{
+				"name" : "X1",
+				"domain" : ["r"]
+			},
+
+			{
+				"name" : "X2",
+				"domain" : ["r", "b", "g"]
+			},
+
+			{
+				"name" : "X3",
+				"domain" : ["r", "b"]
+			},
+
+			{
+				"name" : "X4",
+				"domain" : ["r"]
+			},
+
+			{
+				"name" : "X5",
+				"domain" : ["r", "b", "g"]
+			},
+
+			{
+				"name" : "X6",
+				"domain" : ["r", "b"]
+			}
+		],
+
+	"constraints" :
+		[
+			{
+				"scope" : ["X1", "X2"],
+				"relation" : [["r", "b"], ["r", "g"]]
+			},
+
+			{
+				"scope" : ["X1", "X3"],
+				"relation" : [["r", "b"]]
+			},
+
+			{
+				"scope" : ["X1", "X6"],
+				"relation" : [["r", "b"]]
+			},
+
+			{
+				"scope" : ["X2", "X4"],
+				"relation" : [["b", "r"], ["g", "r"]]
+			},
+
+			{
+				"scope" : ["X2", "X6"],
+				"relation" : [["r", "b"], ["b", "r"], ["g", "r"], ["g", "b"]]
+			},
+
+			{
+				"scope" : ["X3", "X4"],
+				"relation" : [["b", "r"]]
+			},
+
+			{
+				"scope" : ["X3", "X5"],
+				"relation" : [["r", "b"], ["r", "g"], ["b", "r"], ["b", "g"]]
+			},
+
+			{
+				"scope" : ["X4", "X5"],
+				"relation" : [["r", "b"], ["r", "g"]]
+			}
+		],
+
+	"ordering" : ["X1", "X2", "X3", "X4", "X5", "X6"]
+}
